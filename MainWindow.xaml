@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dragos_Cojocaru_Lab5"
         mc:Ignorable="d"
-        Title="Phone Subscribers Management" Height="450" Width="800" Loaded="frmMain_Loaded">
+        Title="Phone Subscribers Management" Height="450" Width="800" Loaded="frmMain_Loaded" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
     <Window.Resources>
         <DataTemplate x:Key="PhoneNumbersTemplate">
             <Grid>
@@ -21,15 +21,15 @@
         <CollectionViewSource x:Key="phoneNumbersViewSource" Source="{Binding PhoneNumbers,Source={StaticResource phoneNumbersDataSet}}"/>
     </Window.Resources>
     <Grid x:Name="grdMain" Loaded="grdMain_Loaded">
-        <Button x:Name="btnNew" Content="New" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="65" Loaded="btnNew_Click"/>
-        <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Width="65" Loaded="btnEdit_Click"/>
-        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" Width="65" Loaded="btnDelete_Click"/>
-        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="725,60,0,0" VerticalAlignment="Top" Width="65" Loaded="btnSave_Click" IsEnabled="False"/>
-        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="725,100,0,0" VerticalAlignment="Top" Width="65" Loaded="btnCancel_Click" IsEnabled="False"/>
-        <ListBox x:Name="lstPhones" Margin="100,60,100,140" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True" ItemTemplate="{StaticResource ResourceKey=PhoneNumbersTemplate}"/>
+        <Button x:Name="btnNew" Content="New" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="65" Click="btnNew_Click"/>
+        <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Width="65" Click="btnEdit_Click"/>
+        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" Width="65" Click="btnDelete_Click"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="725,60,0,0" VerticalAlignment="Top" Width="65" Click="btnSave_Click" IsEnabled="False"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="725,100,0,0" VerticalAlignment="Top" Width="65" Click="btnCancel_Click" IsEnabled="False"/>
+        <ListBox x:Name="lstPhones" Margin="100,60,100,140" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True" ItemTemplate="{StaticResource ResourceKey=PhoneNumbersTemplate}" Width="600" Height="234.04"/>
         <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="725,274,0,0" VerticalAlignment="Top" Width="65" Click="btnExit_Click"/>
-        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Margin="405,310,0,0" VerticalAlignment="Top" Width="65" Loaded="btnNext_Click"/>
-        <Button x:Name="btnPrevious" Content="Previous" HorizontalAlignment="Left" Margin="335,310,0,0" VerticalAlignment="Top"  Width="65" Loaded="btnPrevious_Click"/>
+        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Margin="405,310,0,0" VerticalAlignment="Top" Width="65" Click="btnNext_Click"/>
+        <Button x:Name="btnPrevious" Content="Previous" HorizontalAlignment="Left" Margin="335,310,0,0" VerticalAlignment="Top"  Width="65" Click="btnPrevious_Click"/>
         <Label x:Name="lblPhoneNum" Content="Phone" HorizontalAlignment="Left" Margin="306,365,0,0" VerticalAlignment="Top" />
         <Label x:Name="lblSubscriber" Content="Subscriber" HorizontalAlignment="Left" Margin="444,365,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtPhoneNumber" HorizontalAlignment="Left" Margin="268,391,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Text="{Binding Path=Phonenum}"/>
